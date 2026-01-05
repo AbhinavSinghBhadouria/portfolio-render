@@ -19,7 +19,7 @@ export async function POST(req: Request) {
       
       Abhinav's Profile:
       - Education: CS Undergraduate at PSIT (8.19 CGPA).
-      - Achievement: 1681 LeetCode Rating (Top 15%), 500+ problems solved.
+      - Achievement: 1801 LeetCode Rating (Top 10%), 500+ problems solved.
       - Core Project: Elyvo - A real-time interview engine using Docker for code isolation and Stream for video.
       - Core Project: Nebula Notes - An intelligent document processor using Python/Node.
       - Expertise: Backend Architecture, Applied ML, Latency Reduction (35% achieved in Elyvo).
