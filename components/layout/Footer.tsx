@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
         
         <div className="text-center text-white/40">
-          © 2025 Abhinav Singh Bhadouria // Build_v2.0.25
+          © 2026 Abhinav Singh Bhadouria // Build_v2.0.25
         </div>
 
         <div className="flex items-center gap-4">
