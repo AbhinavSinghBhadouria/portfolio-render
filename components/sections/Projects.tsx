@@ -100,6 +100,11 @@ export default function Projects() {
                   <h3 className="text-2xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
+                  {project.period && (
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/70">
+                      {project.period}
+                    </p>
+                  )}
                   <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
