@@ -87,7 +87,7 @@ export default function Hero() {
             </div>
             <div className="h-10 w-[1px] bg-border hidden sm:block" />
             <div className="flex flex-col items-center">
-              <span className="text-2xl font-black text-foreground">1750+</span> 
+              <span className="text-2xl font-black text-foreground">1800+</span> 
               <span className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">LeetCode Rating</span>
             </div>
             <div className="h-10 w-[1px] bg-border hidden sm:block" />

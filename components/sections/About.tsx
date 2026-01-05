@@ -122,7 +122,7 @@ export default function About() {
               <div className="glass p-4 rounded-xl border-white/5 relative overflow-hidden group/card">
                 <div className="absolute inset-0 bg-accent/5 translate-y-full group-hover/card:translate-y-0 transition-transform duration-500" />
                 <p className="relative text-[10px] uppercase tracking-widest text-muted-foreground mb-1">DSA Rating</p>
-                <p className="relative text-xl font-bold text-accent">1750+ (Top 10%)</p> 
+                <p className="relative text-xl font-bold text-accent">1800+ (Top 10%)</p> 
               </div>
             </div>
 
