@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
@@ -10,6 +11,7 @@ import { cn } from "@/lib/utils"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -100,7 +102,22 @@ export default function Navbar() {
             exit={{ opacity: 0, scale: 0.95 }}
             className="fixed inset-0 z-40 p-6 md:hidden pointer-events-auto"
           >
-            <div className="w-full h-full glass rounded-3xl p-10 flex flex-col items-center justify-center gap-8 bg-black/90">
+            <div className="w-full h-full glass rounded-3xl p-10 flex flex-col items-center justify-center gap-8 bg-black/90 relative">
+              {/* Close X Button - Top Right */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-4 right-4 h-10 w-10 rounded-full hover:bg-primary/20 text-white"
+                onClick={() => {
+                  setIsOpen(false)
+                  if (typeof window !== 'undefined' && window.history.length > 1) {
+                    router.back()
+                  }
+                }}
+              >
+                <X className="h-5 w-5" />
+              </Button>
+              
               {navItems.map((item) => (
                 <Link
                   key={item.name}
