@@ -26,7 +26,7 @@ export default function About() {
     {
       icon: <Cpu className="h-6 w-6" />,
       title: "Algorithmic Depth",
-      description: "Top 15% LeetCode rating (1681) with 500+ problems solved across various platforms.",
+      description: "Top 10% LeetCode rating (1801) with 500+ problems solved across various platforms.",
       color: "from-purple-500/20 to-pink-500/20",
       border: "hover:border-purple-500/50"
     },

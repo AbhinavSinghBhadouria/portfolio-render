@@ -28,7 +28,7 @@ export const experience = [
     company: "Global Coding Platforms",
     period: "2023 - Present",
     responsibilities: [
-      "Ranked in the Top 15% globally on LeetCode with a rating of 1681.",
+      "Ranked in the Top 10% globally on LeetCode with a rating of 1801.",
       "Deciphered and solved 500+ complex algorithmic challenges focusing on Graphs and Dynamic Programming.",
       "Synthesized highly efficient solutions under strict time constraints, prioritizing edge-case resilience.",
       "Applied advanced data structures to optimize computational complexity in competitive environments."
