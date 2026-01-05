@@ -2,7 +2,7 @@ export const experience = [
   {
     position: "Backend Architect & Project Lead",
     company: "Elyvo | Real-Time Interview Ecosystem",
-    period: "2024 - Present",
+    period: "Nov 2025 – Present",
     responsibilities: [
       "Engineered a high-concurrency backend supporting real-time collaborative coding and 1-on-1 video streaming.",
       "Architected a secure code execution engine using Docker to isolate user-submitted scripts within ephemeral containers.",
@@ -14,7 +14,7 @@ export const experience = [
   {
     position: "Software Engineer (Project)",
     company: "Nebula Notes | Intelligent Document Processing",
-    period: "2023 - 2024",
+    period: "Jul 2025 – Oct 2025",
     responsibilities: [
       "Designed a modular document engine with strict separation between business logic and application layers.",
       "Implemented intelligent text analysis and grammar refinement pipelines using Python and Node.js.",
@@ -26,7 +26,7 @@ export const experience = [
   {
     position: "Competitive Programmer",
     company: "Global Coding Platforms",
-    period: "2023 - Present",
+    period: "2025 – Present",
     responsibilities: [
       "Ranked in the Top 10% globally on LeetCode with a rating of 1801.",
       "Deciphered and solved 500+ complex algorithmic challenges focusing on Graphs and Dynamic Programming.",
