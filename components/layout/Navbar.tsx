@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
@@ -11,13 +10,32 @@ import { cn } from "@/lib/utils"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const router = useRouter()
+  const [lastScrollPosition, setLastScrollPosition] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const handleMenuToggle = () => {
+    if (!isOpen) {
+      // Store current scroll position when opening menu
+      setLastScrollPosition(window.scrollY)
+    }
+    setIsOpen(!isOpen)
+  }
+
+  const handleCloseMenu = () => {
+    setIsOpen(false)
+    // Scroll back to the last viewed position
+    setTimeout(() => {
+      window.scrollTo({
+        top: lastScrollPosition,
+        behavior: 'smooth'
+      })
+    }, 100)
+  }
 
   const navItems = [
     { name: "About", href: "#about" },
@@ -86,7 +104,7 @@ export default function Navbar() {
             variant="ghost"
             size="icon"
             className="md:hidden rounded-full"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={handleMenuToggle}
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
@@ -108,12 +126,7 @@ export default function Navbar() {
                 variant="ghost"
                 size="icon"
                 className="absolute top-4 right-4 h-10 w-10 rounded-full hover:bg-primary/20 text-white"
-                onClick={() => {
-                  setIsOpen(false)
-                  if (typeof window !== 'undefined' && window.history.length > 1) {
-                    router.back()
-                  }
-                }}
+                onClick={handleCloseMenu}
               >
                 <X className="h-5 w-5" />
               </Button>
